@@ -1,8 +1,8 @@
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
-      <h1>Welcome to NewsPlus</h1>
-      <p>Reliable global news updated in real time.</p>
+    <main style={{ padding: "20px" }}>
+      <h1>NewsPlus</h1>
+      <p>Your trusted source for breaking news worldwide.</p>
     </main>
   );
 }
