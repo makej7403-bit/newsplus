@@ -1,0 +1,51 @@
+import { useRouter } from "next/router";
+import Navbar from "../../components/Navbar";
+
+export default function CategoryPage() {
+  const router = useRouter();
+  const { category } = router.query;
+
+  return (
+    <div style={styles.container}>
+      <Navbar />
+
+      <header style={styles.header}>
+        <h1>{category?.toUpperCase()} NEWS</h1>
+        <p>Top stories and breaking news for the {category} category.</p>
+      </header>
+
+      <section style={styles.section}>
+        <h2>Articles</h2>
+
+        <div style={styles.placeholderBox}>
+          <p>Articles for "{category}" will load here once we add the API.</p>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    background: "#f5f5f5",
+    minHeight: "100vh",
+  },
+  header: {
+    textAlign: "center",
+    padding: "40px 20px",
+    background: "#fff",
+    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+  },
+  section: {
+    padding: "20px",
+  },
+  placeholderBox: {
+    height: "150px",
+    background: "#e2e2e2",
+    borderRadius: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "#555",
+  },
+};
