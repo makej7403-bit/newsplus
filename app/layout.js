@@ -11,34 +11,11 @@ export default function RootLayout({ children }) {
           margin: 0,
           padding: 0,
           fontFamily: "Arial, sans-serif",
-          background: "#f9f9f9",
+          backgroundColor: "#f5f5f5",
         }}
       >
-        <header
-          style={{
-            padding: "20px",
-            background: "#111",
-            color: "white",
-            textAlign: "center",
-          }}
-        >
-          <h1>NewsPlus</h1>
-        </header>
-
-        <main style={{ padding: "20px" }}>{children}</main>
-
-        <footer
-          style={{
-            marginTop: "40px",
-            padding: "20px",
-            background: "#111",
-            color: "white",
-            textAlign: "center",
-          }}
-        >
-          <p>© 2025 NewsPlus. All rights reserved.</p>
-        </footer>
+        {children}
       </body>
     </html>
   );
-            }
+}
